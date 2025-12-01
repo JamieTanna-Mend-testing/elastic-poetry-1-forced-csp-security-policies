@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@f43a0e5ff2bd294095638e18286ca9a3d1956744 # v3
 
       - name: Download OPA Binary
         run: |
@@ -24,7 +24,7 @@ jobs:
           echo "COVERAGE=$coverage" >> "$GITHUB_ENV"
 
       - name: Create Coverage Badge
-        uses: schneegans/dynamic-badges-action@v1.1.0
+        uses: schneegans/dynamic-badges-action@5ba090896c84b3521c7a75bd8f4de12656e3f426 # v1.1.0
         with:
           auth: ${{ secrets.GIST_SECRET }}
           gistID: a7160df46e48dff45b24096de9302d38
